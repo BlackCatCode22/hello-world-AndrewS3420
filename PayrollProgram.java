@@ -16,8 +16,36 @@
 import java.util.Scanner;
 
 public class PayrollProgram {
+
+    static void theHelloMethod(){
+        System.out.println(" \n Hello from theHelloMethod() ");
+    }
+
+    //Create a method that get input.
+    // This is the method's Definition
+    static void aPersonalGreeting(String someName) {
+        System.out.println("\n hello " + someName + " how are you today?")
+        
+
     public static void main(String[] args) {
-        System.out.println("\n\n....Welcome to the Payroll Program...\n");
+        System.out.println("\n\n....Welcome to PayrollProgram!...\n");
+
+        // Variables (member)
+        String theUserName = "";
+
+
+        // Create a Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Get the users name
+        System.out.println("\n Please enter your name ");
+        theUserName = scanner.nextLine();
+
+        // Call (invoke) our greeting method.
+        aPersonalGreeting(theUserName);
+        
+        
+
         // Variables use in this program
         String userName = "";
         double hoursWorked = 0.0;
@@ -34,11 +62,6 @@ public class PayrollProgram {
         // Create Scanner objects to get input from the user.
         Scanner myScannerObj = new Scanner(System.in);
 
-        // Get the user's name.
-        System.out.print("\n Please enter your name: ");
-        userName = myScannerObj.nextLine();
-
-        System.out.println("\n Hello, " + userName + ". how are you today?");
 
         // Get weekly hours worked from the user.
         // Output statement prompting the user for hrs worked
@@ -79,5 +102,7 @@ public class PayrollProgram {
         System.out.printf("Total Weekly Pay: $%.2f%n", totalWeeklyPay);
         // Close the Scanner
         myScannerObj.close();
+
         }
     }
+
