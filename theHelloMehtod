@@ -1,0 +1,65 @@
+// AS 8/20/24
+/*
+ * PayrollProgram.java
+ *
+ * Input: User's name, weekly hours worked(no hour fractions), user's hourly payrate
+ *
+ * Processing: total weekly pay including overtime if more than 40
+ *    hours were worked that week.
+ *
+ * Output: Polite greeting to the user and regular pay and overtime pay
+ *
+ *
+ */
+//
+
+import java.util.Scanner;
+
+public class PayrollProgram {
+
+    static void theHelloMethod() {
+        System.out.println(" \n Hello from theHelloMethod() ");
+    }
+
+    //Create a method that get input.
+    // This is the method's Definition
+    static void aPersonalGreeting(String someName) {
+        System.out.println("\n hello " + someName + " how are you today?");
+    }
+
+    // Create a method that get twos integers and returns their sum.
+    // Create two int parameters
+    static int sumTwoInts(int num1, int num2) {
+        int mySum = 0;
+        mySum = num1 + num2;
+
+        return mySum;
+
+    }
+
+    public static void main(String[] args) {
+        System.out.println("\n\n....Welcome to Method!...\n");
+
+        // Variables (member)
+        String theUserName = "";
+
+
+        // Create a Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Get the users name
+        System.out.println("\n Please enter your name ");
+        theUserName = scanner.nextLine();
+
+        // Call (invoke) our greeting method.
+        aPersonalGreeting(theUserName);
+
+        theHelloMethod();
+
+        //variable
+        int aSum = 0;
+
+        //call our new sum method
+        aSum = sumTwoInts(3, 4);
+    }
+}
